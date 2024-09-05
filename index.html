@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" 
+    href="https://www.svgrepo.com/show/530646/briefcase.svg" 
+    type="image/svg">
+    <title>Сервис комментариев</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="comment-section">
+        <h1>Оставьте свой комментарий</h1>
+        <div class="input-group" id="name-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" placeholder="Введите ваше имя">
+        </div>
+        <div class="input-group">
+            <label for="avatar">Ссылка на аватар:</label>
+            <input type="text" id="avatar" placeholder="Введите ссылку на аватар">
+        </div>
+        <div class="input-group">
+            <label for="message">Сообщение:</label>
+            <textarea id="message" placeholder="Введите ваше сообщение"></textarea>
+        </div>
+        <div class="input-group">
+            <label for="show-name">
+                <input type="checkbox" id="show-name" checked onchange="toggleNameInput()"> Показывать имя
+            </label>
+        </div>
+        <button onclick="addComment()">Добавить комментарий</button>
+        <div id="comments"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
